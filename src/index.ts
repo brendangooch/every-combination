@@ -27,6 +27,7 @@ export function everyCombination4(input: number[]): number[][] {
     const all: number[][] = [];
     for (let i = 0; i < 4; i++) {
         for (let j = 0; j < 6; j++) {
+            //@ts-ignore
             all.push([input[i]].concat(everyCombination3(input.filter((number, index) => index !== i))[j]));
         }
     }
@@ -38,6 +39,7 @@ export function everyCombination5(input: number[]): number[][] {
     const all: number[][] = [];
     for (let i = 0; i < 5; i++) {
         for (let j = 0; j < 24; j++) {
+            //@ts-ignore
             all.push([input[i]].concat(everyCombination4(input.filter((number, index) => index !== i))[j]));
         }
     }
@@ -49,6 +51,7 @@ export function everyCombination6(input: number[]): number[][] {
     const all: number[][] = [];
     for (let i = 0; i < 6; i++) {
         for (let j = 0; j < 120; j++) {
+            //@ts-ignore
             all.push([input[i]].concat(everyCombination5(input.filter((number, index) => index !== i))[j]));
         }
     }
